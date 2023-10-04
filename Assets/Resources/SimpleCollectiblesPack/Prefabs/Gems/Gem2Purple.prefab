@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4079619840179976}
   - component: {fileID: 33148887627429066}
   - component: {fileID: 23823135644099280}
-  - component: {fileID: 114557631463908536}
   - component: {fileID: 82942395317003978}
   - component: {fileID: 135312882760663300}
+  - component: {fileID: 8200524767804282935}
   m_Layer: 0
   m_Name: Gem2Purple
   m_TagString: Untagged
@@ -86,23 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &114557631463908536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520801571033602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1315172d7ad53634e952f7d8f3c02048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollectibleType: 0
-  rotate: 1
-  rotationSpeed: 10
-  collectSound: {fileID: 8300000, guid: c4eacab0a9e45bd4bb9c90d8b2143a46, type: 3}
-  collectEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!82 &82942395317003978
 AudioSource:
   m_ObjectHideFlags: 0
@@ -208,7 +191,23 @@ SphereCollider:
   m_GameObject: {fileID: 1520801571033602}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8200524767804282935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520801571033602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712ed8244c853de45951d41a8bc8c1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotate: 1
+  rotationSpeed: 10
+  collectSound: {fileID: 8300000, guid: c4eacab0a9e45bd4bb9c90d8b2143a46, type: 3}
+  collectEffect: {fileID: 198174853753332646, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}

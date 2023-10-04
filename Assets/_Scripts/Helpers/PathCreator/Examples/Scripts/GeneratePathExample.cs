@@ -9,7 +9,7 @@ namespace PathCreation.Examples
     public class GeneratePathExample : MonoBehaviour
     {
 
-        [SerializeField] private SimpleCollectibleScript gem;
+        [SerializeField] private CollectibleObject gem;
         public bool closedLoop = true;
         public List<Transform> waypoints;
 
@@ -24,7 +24,7 @@ namespace PathCreation.Examples
                 path.bezierPath = bezierPath;
                 for (int i = 0; i < path.bezierPath.NumPoints; i++)
                 {
-                    PoolManager.Instance.ReuseObject<SimpleCollectibleScript>(gem, path.bezierPath.GetPoint(i), Quaternion.identity);
+                    PoolManager.Instance.ReuseObject<CollectibleObject>(gem, path.bezierPath.GetPoint(i), Quaternion.identity);
                 }
             }
         }

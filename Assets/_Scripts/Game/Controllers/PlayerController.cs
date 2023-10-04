@@ -1,17 +1,18 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private InputController _inputController;
-    [SerializeField] private Animator _playerAnimator;
+    [SerializeField] private Animator playerAnimator;
     [SerializeField] private float horizontalSpeed = 50f;
-    private Vector3 cubeOffset = new Vector3(0f, 0.5f, 0f);
+    private Vector3 _cubeOffset = new Vector3(0f, 0.5f, 0f);
     private float _horizontalDirection;
     private float _horizontalPositionLimit = 2f;
     private RaycastHit _hit;
     private Transform _playerParrent;
-
+    
     public void Start()
     {
         // var playerPos = transform;
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
         GameEvents.Instance.OnPlayerJumped += PlayerJump;
         StartCoroutine(CheckPlayerStart());
     }
-
+    
     private void OnDestroy()
     {
         GameEvents.Instance.OnPlayerJumped -= PlayerJump;
@@ -44,8 +45,8 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerJump()
     {
-        _playerAnimator.SetBool("Jump", true);
-        transform.position += cubeOffset;
+        playerAnimator.SetBool("Jump", true);
+        transform.position += _cubeOffset;
     }
 
     /*  private void PlayerMovement()

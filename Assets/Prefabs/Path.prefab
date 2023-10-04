@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 2706805042269693778}
   - component: {fileID: 2706805042269693781}
   - component: {fileID: 2706805042269693776}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Road Mesh Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f417e74782fffcd40b77b0fdbe82af04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gem: {fileID: 114740300400230638, guid: 908e3427a87e203428312e7911a4c50c, type: 3}
+  gem: {fileID: 8200524767804282935, guid: cfe0dc650593d0b4b853a334bb023534, type: 3}
   closedLoop: 0
   waypoints:
   - {fileID: 2706805041312277313}

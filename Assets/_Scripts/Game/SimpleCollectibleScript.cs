@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
@@ -18,18 +19,8 @@ public class SimpleCollectibleScript : PoolObject
 	public AudioClip collectSound;
 
 	public GameObject collectEffect;
-	private Vector3 _finalCoinPosition = new Vector3(6.5f, 20f, 9f);
-	private float _screenWidth;
-	private float _screenHeight;
 
-	// Use this for initialization
-	void Start()
-	{
-		_screenWidth = Screen.width;
-		_screenHeight = Screen.height;
-	}
 
-	// Update is called once per frame
 	void Update()
 	{
 
@@ -99,13 +90,5 @@ public class SimpleCollectibleScript : PoolObject
 		}
 
 		Destroy();
-		// MoveAfterCollected();
-	}
-
-	//перевірить як воно переміщується в дутввіном
-	private void MoveAfterCollected()
-	{
-		Vector3 fPos = new Vector3(_screenWidth - 25f, _screenHeight - 20f);
-		this.transform.Translate(fPos, Space.World);
 	}
 }

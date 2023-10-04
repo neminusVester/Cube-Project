@@ -10,6 +10,6 @@ public class TestCoinSpawner : MonoBehaviour
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.N))
-        PoolManager.Instance.ReuseObject<SimpleCollectibleScript>(coin, Vector3.one * Random.Range(-10,10), Quaternion.identity);
+            PoolManager.Instance.ReuseObject<SimpleCollectibleScript>(coin, Vector3.one * Random.Range(-10,10), Quaternion.identity);
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +12,8 @@ public class CanvasController : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button retryButton;
     [SerializeField] private Button nextLevelButton;
+
+    [SerializeField] private Text gemsText;
 
 
     private void Start()
@@ -32,16 +32,6 @@ public class CanvasController : MonoBehaviour
         GameEvents.Instance.OnPlayerLose -= PlayerLose;
         GameEvents.Instance.OnFinishTrigger -= LevelCompleted;
     }
-
-#if UNITY_EDITOR
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            GameEvents.Instance.PlayerRestartGame();
-        }
-    }
-#endif
 
     private void StartGame()
     {
